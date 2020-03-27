@@ -1,5 +1,4 @@
 import requests
-from bs4 import BeautifulSoup as bs
 import logging
 import re
 from datetime import datetime
@@ -22,44 +21,7 @@ case_collection = db['case']        # only Singapore now
 
 
 
-def parse_wikipedia():
-    total_records = {}
 
-    # only limited data
-    # total/death/cued/active
-    content = requests.get("https://en.wikipedia.org/w/index.php?title=Template:2019%E2%80%9320_coronavirus_pandemic_data/Singapore_medical_cases_chart&action=edit").content
-    # print(content)
-    soup = bs(content, 'html.parser')
-    print(soup.textarea.text)
-
-    pattern = r"\{\{Medical cases chart/Row\|(\d+?-\d+?-\d+?)\|(|\d?)\|(|\d*?)\|(|\d*?)\|\|\|(|\d*?)\|.+?\|(|\d*?)\|.+?\}\}"
-    results = re.findall(pattern, soup.textarea.text, re.MULTILINE)
-
-    for result in results:
-        dt = result[0]
-        death = 0 if result[1] == '' else int(result[1])
-        cued = 0 if result[2] == '' else int(result[2])
-        total = int(result[3])
-        confirmed = 0
-        discharged = 0
-        prev_dt = previous_date((dt))
-        if prev_dt in total_records:
-            confirmed = total - total_records[prev_dt]['confirmed_total']
-            discharged = cued - total_records[prev_dt]['discharged_total']
-
-        result_json = {
-            "country": "Singapore",
-            "date": dt,
-            "confirmed": int(confirmed),
-            "confirmed_total": int(total),
-            "discharged": int(discharged),
-            "discharged_total": int(cued),
-            "death_total": int(death),
-            "update_ts": time.time()
-        }
-        print(result_json, {"country": "Singapore", "date": dt} )
-        daily_collection.update({"country": "Singapore", "date": dt}, {'$set': result_json}, upsert=True)
-        total_records[dt] = result_json
 
 
 def export_to_file(country, format='json', start_date=None, end_date=None, filename=None):
@@ -101,7 +63,7 @@ if __name__ == "__main__":
         json_arr.append(result_json)
         daily_collection.update({"country": "Singapore", "date": dt}, result_json, upsert=True)
 
-    parse_wikipedia()
+    parse_wikipedia(url="https://en.wikipedia.org/w/index.php?title=Template:2019%E2%80%9320_coronavirus_pandemic_data/Malaysia_medical_cases_chart&action=edit", country='Malaysia', daily_collection=daily_collection)
 
     # export to files
     export_to_file(country='Singapore', format='csv')
