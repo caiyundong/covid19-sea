@@ -70,7 +70,7 @@ def export_to_file(country, format='all', start_date=None, end_date=None, filena
     filename = f"../data/{country}_daily.{format}"
     if format == 'json':
         with open(filename, 'w') as outfile:
-            json.dump(records, outfile)
+            json.dump(records, outfile, indent=4)
     elif format == 'csv':
         print(type(records))
         df = pandas.DataFrame(records)
@@ -78,7 +78,7 @@ def export_to_file(country, format='all', start_date=None, end_date=None, filena
     elif format == 'all':
         filename = f"../data/{country}_daily.json"
         with open(filename, 'w') as outfile:
-            json.dump(records, outfile)
+            json.dump(records, outfile, indent=4)
 
         filename = f"../data/{country}_daily.csv"
         df = pandas.DataFrame(records)
