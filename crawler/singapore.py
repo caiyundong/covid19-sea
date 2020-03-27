@@ -7,14 +7,27 @@ from pymongo import MongoClient
 import time
 import json
 import redis
+import pandas
+from common import *
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s %(name)-12s %(levelname)-8s %(message)s',)
+mongo_client = MongoClient('localhost', 27017)
+db = mongo_client.covid19
+
+# setup redis
+redis_client = redis.StrictRedis("localhost")
+
+daily_collection = db['daily']
+case_collection = db['case']        # only Singapore now
+
+
 
 def parse_wikipedia():
+    total_records = {}
+
     # only limited data
     # total/death/cued/active
-    content = requests.get(
-        "https://en.wikipedia.org/w/index.php?title=Template:2019%E2%80%9320_coronavirus_pandemic_data/Singapore_medical_cases_chart&action=edit").content
+    content = requests.get("https://en.wikipedia.org/w/index.php?title=Template:2019%E2%80%9320_coronavirus_pandemic_data/Singapore_medical_cases_chart&action=edit").content
     # print(content)
     soup = bs(content, 'html.parser')
     print(soup.textarea.text)
@@ -27,24 +40,46 @@ def parse_wikipedia():
         death = 0 if result[1] == '' else int(result[1])
         cued = 0 if result[2] == '' else int(result[2])
         total = int(result[3])
+        confirmed = 0
+        discharged = 0
+        prev_dt = previous_date((dt))
+        if prev_dt in total_records:
+            confirmed = total - total_records[prev_dt]['confirmed_total']
+            discharged = cued - total_records[prev_dt]['discharged_total']
+
         result_json = {
+            "country": "Singapore",
             "date": dt,
-            "total": total,
-            "cued": cued,
-            "death": death
+            "confirmed": int(confirmed),
+            "confirmed_total": int(total),
+            "discharged": int(discharged),
+            "discharged_total": int(cued),
+            "death_total": int(death),
+            "update_ts": time.time()
         }
-        print(result_json)
-    return results
+        print(result_json, {"country": "Singapore", "date": dt} )
+        daily_collection.update({"country": "Singapore", "date": dt}, {'$set': result_json}, upsert=True)
+        total_records[dt] = result_json
+
+
+def export_to_file(country, format='json', start_date=None, end_date=None, filename=None):
+    # fetch the data from the mongodb
+    records = list(daily_collection.find({'country': country}, {"_id": 0, "update_ts": 0, "country": 0}))
+    print("records are ", records)
+    with open(f"../data/{country}_daily.{format}", 'w') as outfile:
+        if format == 'json':
+            json.dump(records, outfile)
+        else:
+            print(type(records))
+            df = pandas.DataFrame(records)
+            print(df)
+            csv_content = df.to_csv(index=False, line_terminator='\n')
+            outfile.write(csv_content)
+            outfile.close()
 
 
 if __name__ == "__main__":
     logging.info("Start the crawl")
-
-    mongo_client = MongoClient('localhost', 27017)
-    db = mongo_client.covid19
-
-    daily_collection = db['daily']
-    case_collection = db['case']        # only Singapore now
 
     # crawl the daily statistics
     json_arr = []
@@ -66,14 +101,17 @@ if __name__ == "__main__":
         json_arr.append(result_json)
         daily_collection.update({"country": "Singapore", "date": dt}, result_json, upsert=True)
 
-    with open('../data/singapore_daily.json', 'w') as outfile:
-        json.dump(json_arr, outfile)
+    parse_wikipedia()
+
+    # export to files
+    export_to_file(country='Singapore', format='csv')
+    export_to_file(country='Singapore', format='json')
 
     # crawl the detailed cases
     logging.info("Craw the cases in Singapore")
     detailed_cases = requests.get("https://services6.arcgis.com/LZwBmoXba0zrRap7/arcgis/rest/services/COVID_19_Prod_feature/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Case_ID%20asc&resultOffset=0&resultRecordCount=1000&cacheHint=true").json()
     # print(detailed_cases)
-    print(detailed_cases['features'])
+    # print(detailed_cases['features'])
     case_json_arr = []
     for idx, result in enumerate(detailed_cases['features']):
         attributes = result['attributes']
@@ -120,9 +158,9 @@ if __name__ == "__main__":
             "residence_location": residence_location
 
         }
-        print(result_json)
+        # print(result_json)
         case_json_arr.append(result_json)
-        ret = case_collection.update({"country": "Singapore", "case_id": case_id}, result_json, upsert=True)
+        ret = case_collection.update({"country": "Singapore", "case_id": case_id}, {'$set': result_json}, upsert=True)
 
         if idx == 0:
             logging.info("Process only once")
