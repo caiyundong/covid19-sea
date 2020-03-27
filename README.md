@@ -1,6 +1,14 @@
 # covid19-sea
 COVID 19 Data and Dashboard for southeast asia (Singapore, Malaysia, Indonesia, Thailand, Vietnam, Philippines, Myanmar, Brunei, Laos, Cambodia, East Timor)
 
+
+`### Solar System Exploration, 1950s – 1960s
+
+- [x] Crawler to fetch the daily statistics from wikipedia
+- [x] Save the latest data into data folder
+- [ ] Setup the cronjob to crawl data
+- [ ] Provide API to fetch online`
+
 # Data Source
 * Singapore
    * https://www.moh.gov.sg/covid-19
