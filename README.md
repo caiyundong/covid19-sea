@@ -29,6 +29,11 @@ COVID 19 Data and Dashboard for southeast asia (Singapore, Malaysia, Indonesia, 
 
 # Web Server
 The web server is build with Flask + Flask-restful.
+```
+cd web_server
+python app.py
+
+```
 
 # Database
 ## Mongodb 
