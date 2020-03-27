@@ -3,6 +3,8 @@ import requests
 import re
 from bs4 import BeautifulSoup as bs
 import time
+import json
+import pandas
 
 
 def previous_date(current_date, days=1):
@@ -55,3 +57,31 @@ def parse_wikipedia(url, country, daily_collection):
         print(result_json, {"country": country, "date": dt} )
         daily_collection.update({"country": country, "date": dt}, {'$set': result_json}, upsert=True)
         total_records[dt] = result_json
+
+
+def export_to_file(country, format='all', start_date=None, end_date=None, filename=None, daily_collection=None):
+    # fetch the data from the mongodb
+    if not daily_collection:
+        raise Exception("Failed to get the mongodb collection")
+
+    records = list(daily_collection.find({'country': country}, {"_id": 0, "update_ts": 0, "country": 0}))
+    print("records are ", records)
+
+    filename = f"../data/{country}_daily.{format}"
+    if format == 'json':
+        with open(filename, 'w') as outfile:
+            json.dump(records, outfile)
+    elif format == 'csv':
+        print(type(records))
+        df = pandas.DataFrame(records)
+        df.to_csv(filename, index=False, line_terminator='\n')
+    elif format == 'all':
+        filename = f"../data/{country}_daily.json"
+        with open(filename, 'w') as outfile:
+            json.dump(records, outfile)
+
+        filename = f"../data/{country}_daily.csv"
+        df = pandas.DataFrame(records)
+        df.to_csv(filename, index=False, line_terminator='\n')
+    else:
+        raise Exception("Invalid export format")
