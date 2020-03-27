@@ -40,12 +40,20 @@ def export_to_file(country, format='json', start_date=None, end_date=None, filen
 if __name__ == "__main__":
     logging.info("Start the crawl")
 
-    parse_wikipedia(url="https://en.wikipedia.org/w/index.php?title=Template:2019%E2%80%9320_coronavirus_pandemic_data/Malaysia_medical_cases_chart&action=edit", country='Malaysia', daily_collection=daily_collection)
-    # parse_wikipedia(url="https://en.wikipedia.org/w/index.php?title=Template:2019%E2%80%9320_coronavirus_pandemic_data/Indonesia_medical_cases_chart&action=edit", country='Indonesia', daily_collection=daily_collection)
+    wikipedia_addresses = {
+        # 'Malaysia': "https://en.wikipedia.org/w/index.php?title=Template:2019%E2%80%9320_coronavirus_pandemic_data/Malaysia_medical_cases_chart&action=edit",
+        # 'Indonesia': "https://en.wikipedia.org/w/index.php?title=Template:2019%E2%80%9320_coronavirus_pandemic_data/Indonesia_medical_cases_chart&action=edit"
+        # 'Thailand': 'https://en.wikipedia.org/w/index.php?title=Template:2019%E2%80%9320_coronavirus_pandemic_data/Thailand_medical_cases_chart&action=edit',
+        #'Vietnam': 'https://en.wikipedia.org/w/index.php?title=Template:2019%E2%80%9320_coronavirus_pandemic_data/Vietnam_medical_cases_chart&action=edit',
+        'Philippines': 'https://en.wikipedia.org/w/index.php?title=Template:2019%E2%80%9320_coronavirus_pandemic_data/Philippines_medical_cases_chart&action=edit',
+        'Burnei': 'https://en.wikipedia.org/w/index.php?title=Template:2019%E2%80%9320_coronavirus_pandemic_data/Brunei_medical_cases_chart&action=edit',
+    }
 
+    for country, wikipedia_address in wikipedia_addresses.items():
+        parse_wikipedia(
+            url=wikipedia_address,
+            country=country, daily_collection=daily_collection)
 
-    # export to files
-    export_to_file(country='Malaysia', format='csv')
-    export_to_file(country='Malaysia', format='json')
-    # export_to_file(country='Indonesia', format='csv')
-    # export_to_file(country='Indonesia', format='json')
+        # export the data into json and csv
+        export_to_file(country=country, format='csv')
+        export_to_file(country=country, format='json')
