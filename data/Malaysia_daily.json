@@ -403,8 +403,32 @@
         "date": "2020-03-26",
         "confirmed": 235,
         "confirmed_total": 2031,
-        "death_total": 23,
+        "death_total": 24,
         "discharged": 16,
         "discharged_total": 215
+    },
+    {
+        "date": "2020-03-27",
+        "confirmed": 130,
+        "confirmed_total": 2161,
+        "death_total": 26,
+        "discharged": 44,
+        "discharged_total": 259
+    },
+    {
+        "date": "2020-03-28",
+        "confirmed": 159,
+        "confirmed_total": 2320,
+        "death_total": 27,
+        "discharged": 61,
+        "discharged_total": 320
+    },
+    {
+        "date": "2020-03-29",
+        "confirmed": 150,
+        "confirmed_total": 2470,
+        "death_total": 34,
+        "discharged": 68,
+        "discharged_total": 388
     }
 ]
