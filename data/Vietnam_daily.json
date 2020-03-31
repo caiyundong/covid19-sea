@@ -350,5 +350,13 @@
         "death_total": 0,
         "discharged": 4,
         "discharged_total": 25
+    },
+    {
+        "date": "2020-03-30",
+        "confirmed": 15,
+        "confirmed_total": 203,
+        "death_total": 0,
+        "discharged": 30,
+        "discharged_total": 55
     }
 ]

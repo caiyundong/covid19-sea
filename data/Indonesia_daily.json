@@ -145,15 +145,15 @@
     },
     {
         "date": "2020-03-24",
-        "confirmed": 107,
-        "confirmed_total": 686,
+        "confirmed": 106,
+        "confirmed_total": 685,
         "death_total": 55,
         "discharged": 0,
         "discharged_total": 30
     },
     {
         "date": "2020-03-25",
-        "confirmed": 104,
+        "confirmed": 105,
         "confirmed_total": 790,
         "death_total": 58,
         "discharged": 1,
@@ -190,5 +190,13 @@
         "death_total": 114,
         "discharged": 5,
         "discharged_total": 64
+    },
+    {
+        "date": "2020-03-30",
+        "confirmed": 129,
+        "confirmed_total": 1414,
+        "death_total": 122,
+        "discharged": 11,
+        "discharged_total": 75
     }
 ]
