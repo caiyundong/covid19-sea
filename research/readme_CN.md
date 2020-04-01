@@ -1,7 +1,7 @@
 # 疫情相关资源总结
 
-## 数据网页 （Dashboard)
-* 约翰霍普金斯 https://coronavirus.jhu.edu/map.html （基于arcgis开发）
+## 数据网页 (Dashboard)
+* 约翰霍普金斯 https://coronavirus.jhu.edu/map.html (基于arcgis开发）
 * https://ncov2019.live/data （17岁高中生独立开发全球最火疫情追踪网站）
 * [新加坡疫情](https://experience.arcgis.com/experience/7e30edc490a5441a874f9efe67bd8b89)
 
