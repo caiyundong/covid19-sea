@@ -8,19 +8,19 @@
 ## 传染病方舱模型
 
 ## 仿真程序
-* [VirusBroadcast]{https://github.com/KikiLetGo/VirusBroadcast}  - 一个基于java的模拟仿真程序
-* [Virtual School]{https://github.com/YunxiuXu/Virus-School}
+* [VirusBroadcast](https://github.com/KikiLetGo/VirusBroadcast)  - 一个基于java的模拟仿真程序
+* [Virtual School](https://github.com/YunxiuXu/Virus-School)
     * Unity模拟病毒在校园中传播 Unity版本 2017.4.36c1 Win10
 * 基于元胞自动机模型的在线仿真 [Going Critical by Kevin Simler](https://www.meltingasphalt.com/interactive/going-critical/)
-* [斯坦福发布“防疫公司”模拟器：“照明开关法”或为美国社交隔离最优解]{https://new.qq.com/omn/20200331/20200331A0CSUW00.html}
-    * [Potential Long-Term Intervention Strategies for COVID-19]{https://covid-measures.github.io/}
-    * [在线仿真]{https://morganpkain.shinyapps.io/covid/}
-    * ![alt 模型]{https://covid-measures.github.io/model_schematic.png}
+* [斯坦福发布“防疫公司”模拟器：“照明开关法”或为美国社交隔离最优解](https://new.qq.com/omn/20200331/20200331A0CSUW00.html)
+    * [Potential Long-Term Intervention Strategies for COVID-19](https://covid-measures.github.io/)
+    * [在线仿真](https://morganpkain.shinyapps.io/covid/)
+    * ![alt 模型](https://covid-measures.github.io/model_schematic.png)
 
 ## 数据集
-* [约翰霍普金斯 CSSE]{https://github.com/CSSEGISandData/COVID-19} 15.5k Star
-* [2019新型冠状病毒疫情实时爬虫 - 丁香园数据]{https://github.com/BlankerL/DXY-COVID-19-Crawler} 1.4k Star
-* [新冠病毒项目合集]{https://github.com/soroushchehresa/awesome-coronavirus} - API, 数据集, 模型, 算法等
+* [约翰霍普金斯 CSSE](https://github.com/CSSEGISandData/COVID-19) 15.5k Star
+* [2019新型冠状病毒疫情实时爬虫 - 丁香园数据](https://github.com/BlankerL/DXY-COVID-19-Crawler) 1.4k Star
+* [新冠病毒项目合集](https://github.com/soroushchehresa/awesome-coronavirus) - API, 数据集, 模型, 算法等
 
 ## 国内外趋势指数
 * Google Trends 

@@ -1,14 +1,14 @@
-# covid19-sea
+# covid19-sea [中文](/research/readme_CN.md#疫情相关资源总结)
 ![COVID19](https://images.unsplash.com/flagged/photo-1584036561584-b03c19da874c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1778&q=80)
 COVID 19 Data and Dashboard for southeast asia (Singapore, Malaysia, Indonesia, Thailand, Vietnam, Philippines, Myanmar, Brunei, Laos, Cambodia, East Timor)
 
 
-`### Solar System Exploration, 1950s – 1960s
+**Todo**
 
 - [x] Crawler to fetch the daily statistics from wikipedia
 - [x] Save the latest data into data folder
 - [ ] Setup the cronjob to crawl data
-- [ ] Provide API to fetch online`
+- [ ] Provide API to fetch online
 
 # Data Source
 * Singapore
