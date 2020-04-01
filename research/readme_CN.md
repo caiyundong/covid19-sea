@@ -24,7 +24,7 @@
     * [在线仿真](https://morganpkain.shinyapps.io/covid/)
     * ![alt 模型](https://covid-measures.github.io/model_schematic.png)
     * 基于SIER，加入了两个干预 （“照明开关方法” 和 "社交距离"）
-* [用Python实现经典传染病模型]{https://zhuanlan.zhihu.com/p/104091330}, [用Python实现经典传染病模型（R0值实时更新）]{https://bbs.pinggu.org/thread-7759400-1-1.html}
+* [用Python实现经典传染病模型](https://zhuanlan.zhihu.com/p/104091330), [用Python实现经典传染病模型（R0值实时更新）](https://bbs.pinggu.org/thread-7759400-1-1.html)
 
 ## 数据集
 * [约翰霍普金斯 CSSE](https://github.com/CSSEGISandData/COVID-19) 15.5k Star
