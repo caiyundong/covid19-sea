@@ -5,7 +5,14 @@
 * https://ncov2019.live/data （17岁高中生独立开发全球最火疫情追踪网站）
 * [新加坡疫情](https://experience.arcgis.com/experience/7e30edc490a5441a874f9efe67bd8b89)
 
-## 传染病方舱模型
+## 传染病方舱模型/[传染病模型](https://baike.baidu.com/item/%E4%BC%A0%E6%9F%93%E7%97%85%E6%A8%A1%E5%9E%8B)
+* 人群分类
+    1. S 类，易感者 (Susceptible)，指未得病者，但缺乏免疫能力，与感染者接触后容易受到感染；
+    2. E 类，暴露者 (Exposed)，指接触过感染者，但暂无能力传染给其他人的人，对潜伏期长的传染病适用；
+    3. I 类，感病者 (Infectious)，指染上传染病的人，可以传播给 S 类成员，将其变为 E 类或 I 类成员；
+    4. R 类，康复者 (Recovered)，指被隔离或因病愈而具有免疫力的人。如免疫期有限，R 类成员可以重新变为 S 类。
+* SEIR模型
+    * ![方程](https://bkimg.cdn.bcebos.com/pic/5366d0160924ab18fbdab0573afae6cd7a890b85)
 
 ## 仿真程序
 * [VirusBroadcast](https://github.com/KikiLetGo/VirusBroadcast)  - 一个基于java的模拟仿真程序
@@ -16,6 +23,8 @@
     * [Potential Long-Term Intervention Strategies for COVID-19](https://covid-measures.github.io/)
     * [在线仿真](https://morganpkain.shinyapps.io/covid/)
     * ![alt 模型](https://covid-measures.github.io/model_schematic.png)
+    * 基于SIER，加入了两个干预 （“照明开关方法” 和 "社交距离"）
+* [用Python实现经典传染病模型]{https://zhuanlan.zhihu.com/p/104091330}, [用Python实现经典传染病模型（R0值实时更新）]{https://bbs.pinggu.org/thread-7759400-1-1.html}
 
 ## 数据集
 * [约翰霍普金斯 CSSE](https://github.com/CSSEGISandData/COVID-19) 15.5k Star
