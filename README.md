@@ -32,7 +32,13 @@ The web server is build with Flask + Flask-restful.
 ```
 cd web_server
 python app.py
+```
 
+The available APIs
+```rest
+http://127.0.0.1:5000/api/countries
+http://127.0.0.1:5000/api/daily/singapore?limit=4
+http://127.0.0.1:5000/api/case/singapore?limit=4
 ```
 
 # Database
