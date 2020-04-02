@@ -26,6 +26,7 @@ if __name__ == "__main__":
     # crawl the daily statistics
     json_arr = []
     results = requests.get("https://services6.arcgis.com/LZwBmoXba0zrRap7/arcgis/rest/services/COVID_19_Prod_cumulative/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Date%20asc&resultOffset=0&resultRecordCount=2000&cacheHint=true").json()
+    # results = requests.get("https://services6.arcgis.com/LZwBmoXba0zrRap7/arcgis/rest/services/COVID_19_Prod_B_cumulative/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Date%20asc&resultOffset=0&resultRecordCount=2000&cacheHint=true").json()
 
     for result in results['features']:
         attributes = result['attributes']
@@ -53,6 +54,7 @@ if __name__ == "__main__":
     # crawl the detailed cases
     logging.info("Craw the cases in Singapore")
     detailed_cases = requests.get("https://services6.arcgis.com/LZwBmoXba0zrRap7/arcgis/rest/services/COVID_19_Prod_feature/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Case_ID%20asc&resultOffset=0&resultRecordCount=1000&cacheHint=true").json()
+    # detailed_cases = requests.get("https://services6.arcgis.com/LZwBmoXba0zrRap7/arcgis/rest/services/COVID_19_Prod_B_feature/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Case_ID%20asc&resultOffset=0&resultRecordCount=1000&cacheHint=true").json()
     # print(detailed_cases)
     # print(detailed_cases['features'])
     case_json_arr = []
@@ -123,4 +125,4 @@ if __name__ == "__main__":
             url = attributes['Prs_rl_URL']
 
     with open('../data/singapore_cases.json', 'w') as outfile:
-        json.dump(case_json_arr, outfile)
+        json.dump(case_json_arr, outfile, indent=4)

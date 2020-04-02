@@ -134,10 +134,27 @@ class DailyResource(Resource):
         # return task, 201
     """
 
+class CaseResource(Resource):
+    def get(self, country_name):
+        parser = reqparse.RequestParser()
+        parser.add_argument('limit', type=int)
+        parser.add_argument('sort', type=int, default=-1)
+        args = parser.parse_args()
+
+        country_name = country_name.capitalize()
+        abort_if_country_doesnt_exist(country_name)
+        if 'limit' in args and args['limit']:
+            records = case_collection.find({'country': country_name}, {'_id': 0}).sort([('date', args['sort'])])\
+                .limit(args['limit'])
+        else:
+            records = case_collection.find({'country': country_name}, {'_id': 0}).sort([('date', args['sort'])])
+        return list(records)
+
 
 api.add_resource(Ping, '/api/ping')
 api.add_resource(CountryResource, '/api/countries')
 api.add_resource(DailyResource, '/api/daily/<country_name>')
+api.add_resource(CaseResource, '/api/case/<country_name>')
 
 
 @app.route('/')

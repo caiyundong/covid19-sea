@@ -542,5 +542,29 @@
         "discharged": 16,
         "discharged_total": 231,
         "hospitalised": 648
+    },
+    {
+        "date": "2020-03-31",
+        "confirmed": 47,
+        "confirmed_total": 926,
+        "discharged": 12,
+        "discharged_total": 243,
+        "hospitalised": 683
+    },
+    {
+        "date": "2020-04-01",
+        "confirmed": 74,
+        "confirmed_total": 1000,
+        "discharged": 5,
+        "discharged_total": 248,
+        "hospitalised": 752
+    },
+    {
+        "date": "2020-04-02",
+        "confirmed": 0,
+        "confirmed_total": 1000,
+        "discharged": 1,
+        "discharged_total": 249,
+        "hospitalised": 751
     }
 ]

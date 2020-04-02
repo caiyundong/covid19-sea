@@ -502,5 +502,13 @@
         "death_total": 10,
         "discharged": 215,
         "discharged_total": 342
+    },
+    {
+        "date": "2020-04-01",
+        "confirmed": 120,
+        "confirmed_total": 1771,
+        "death_total": 12,
+        "discharged": 74,
+        "discharged_total": 416
     }
 ]
