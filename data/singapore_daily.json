@@ -561,10 +561,26 @@
     },
     {
         "date": "2020-04-02",
-        "confirmed": 0,
-        "confirmed_total": 1000,
-        "discharged": 1,
-        "discharged_total": 249,
-        "hospitalised": 751
+        "confirmed": 49,
+        "confirmed_total": 1049,
+        "discharged": 22,
+        "discharged_total": 270,
+        "hospitalised": 779
+    },
+    {
+        "date": "2020-04-03",
+        "confirmed": 65,
+        "confirmed_total": 1114,
+        "discharged": 17,
+        "discharged_total": 287,
+        "hospitalised": 827
+    },
+    {
+        "date": "2020-04-04",
+        "confirmed": 75,
+        "confirmed_total": 1189,
+        "discharged": 16,
+        "discharged_total": 303,
+        "hospitalised": 886
     }
 ]

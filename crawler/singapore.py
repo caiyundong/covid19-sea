@@ -26,7 +26,8 @@ if __name__ == "__main__":
     # crawl the daily statistics
     json_arr = []
     results = requests.get("https://services6.arcgis.com/LZwBmoXba0zrRap7/arcgis/rest/services/COVID_19_Prod_cumulative/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Date%20asc&resultOffset=0&resultRecordCount=2000&cacheHint=true").json()
-    # results = requests.get("https://services6.arcgis.com/LZwBmoXba0zrRap7/arcgis/rest/services/COVID_19_Prod_B_cumulative/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Date%20asc&resultOffset=0&resultRecordCount=2000&cacheHint=true").json()
+    if 'error' in results:
+        results = requests.get("https://services6.arcgis.com/LZwBmoXba0zrRap7/arcgis/rest/services/COVID_19_Prod_B_cumulative/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Date%20asc&resultOffset=0&resultRecordCount=2000&cacheHint=true").json()
 
     for result in results['features']:
         attributes = result['attributes']
@@ -43,7 +44,7 @@ if __name__ == "__main__":
         }
         print(result_json)
         json_arr.append(result_json)
-        daily_collection.update({"country": "Singapore", "date": dt}, result_json, upsert=True)
+        daily_collection.update_one({"country": "Singapore", "date": dt}, {'$set': result_json}, upsert=True)
 
     parse_wikipedia(url="https://en.wikipedia.org/w/index.php?title=Template:2019%E2%80%9320_coronavirus_pandemic_data/Malaysia_medical_cases_chart&action=edit", country='Malaysia', daily_collection=daily_collection)
 
@@ -54,7 +55,8 @@ if __name__ == "__main__":
     # crawl the detailed cases
     logging.info("Craw the cases in Singapore")
     detailed_cases = requests.get("https://services6.arcgis.com/LZwBmoXba0zrRap7/arcgis/rest/services/COVID_19_Prod_feature/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Case_ID%20asc&resultOffset=0&resultRecordCount=1000&cacheHint=true").json()
-    # detailed_cases = requests.get("https://services6.arcgis.com/LZwBmoXba0zrRap7/arcgis/rest/services/COVID_19_Prod_B_feature/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Case_ID%20asc&resultOffset=0&resultRecordCount=1000&cacheHint=true").json()
+    if 'error' in detailed_cases:
+        detailed_cases = requests.get("https://services6.arcgis.com/LZwBmoXba0zrRap7/arcgis/rest/services/COVID_19_Prod_B_feature/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Case_ID%20asc&resultOffset=0&resultRecordCount=1000&cacheHint=true").json()
     # print(detailed_cases)
     # print(detailed_cases['features'])
     case_json_arr = []
@@ -105,7 +107,7 @@ if __name__ == "__main__":
         }
         # print(result_json)
         case_json_arr.append(result_json)
-        ret = case_collection.update({"country": "Singapore", "case_id": case_id}, {'$set': result_json}, upsert=True)
+        ret = case_collection.update_one({"country": "Singapore", "case_id": case_id}, {'$set': result_json}, upsert=True)
 
         if idx == 0:
             logging.info("Process only once")
