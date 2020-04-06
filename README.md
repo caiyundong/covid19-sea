@@ -36,17 +36,14 @@ python app.py
 
 The available APIs
 * List SEA countries
-```
-http://127.0.0.1:5000/api/countries
-```
+  * http://127.0.0.1:5000/api/countries
+
 * List daily statistics
-```
-http://127.0.0.1:5000/api/daily/singapore?limit=4
-```
+  * http://127.0.0.1:5000/api/daily/singapore?limit=4
+
 * List the detailed cases (only Singapore available)
-```
-http://127.0.0.1:5000/api/case/singapore?limit=4
-```
+  * http://127.0.0.1:5000/api/case/singapore?limit=4
+
 
 # Database
 ## Mongodb 
