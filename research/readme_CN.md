@@ -30,6 +30,7 @@
 * [约翰霍普金斯 CSSE](https://github.com/CSSEGISandData/COVID-19) 15.5k Star
 * [2019新型冠状病毒疫情实时爬虫 - 丁香园数据](https://github.com/BlankerL/DXY-COVID-19-Crawler) 1.4k Star
 * [新冠病毒项目合集](https://github.com/soroushchehresa/awesome-coronavirus) - API, 数据集, 模型, 算法等
+* [Covid-19 相关CT图片数据集以及AI papers]{https://github.com/HzFu/COVID19_imaging_AI_paper_list} - 数据集，文章
 
 ## 国内外趋势指数
 * Google Trends 
@@ -45,6 +46,10 @@
     * API （http://databus.gsdata.cn/open/index）
 * 其他
     * [360趋势](https://trends.so.com)， [搜狗指数](http://index.sogou.com)， [阿里指数](https://index.1688.com)
+    
+## 研究报道
+* [全球疫情形势数据分析：拐点预测和长尾特征](https://mp.weixin.qq.com/s/nDgAp3tkH9eyJLvmlfC4HA) - 恒大研究院 任泽平 李建国
+   * 1) 新冠肺炎传染性强， R0值在3.1左右，高于SARS和西班牙流感。30%-60%的新冠病毒感染者无症状或者症状轻微，但具有传染性，是其防控难度大的突出原因。2)新增确诊拐点和现有确诊拐点的出现是疫情缓解的前提，两大拐点是观察疫情的关键。只有第二个拐点达到之后，整体疫情才有可能缓解。3) 意大利、西班牙、德国在3月下旬达到新增确诊的高点，即第一拐点，目前正在靠近第二拐点，有望于4月底逐步缓解，但存在“长尾特征”。
     
 ## 新闻
 * [打击“信息病毒”科技巨头努力消除“内容鸿沟”](https://www.yicai.com/news/100507246.html)
