@@ -13,6 +13,7 @@
     4. R 类，康复者 (Recovered)，指被隔离或因病愈而具有免疫力的人。如免疫期有限，R 类成员可以重新变为 S 类。
 * SEIR模型
     * ![方程](https://bkimg.cdn.bcebos.com/pic/5366d0160924ab18fbdab0573afae6cd7a890b85)
+    * 如果所研究的传染病有一定的潜伏期，与病人接触过的健康人并不马上患病，而是成为病原体的携带者，归入 E 类。仍有守恒关系 S(t) + E(t) + I(t) + R(t) = 常数，病死者可归入 R 类。潜伏期康复率 γ1 和患者康复率 γ2 一般不同。潜伏期发展为患者的速率为 α。与 SIR 模型相比，SEIR 模型进一步考虑了与患者接触过的人中仅一部分具有传染性的因素，使疾病的传播周期更长。疾病最终的未影响人数 S∞ 和影响人数 R∞ 可通过数值模拟得到。
 * [斯坦福发布“防疫公司”模拟器：“照明开关法”或为美国社交隔离最优解](https://new.qq.com/omn/20200331/20200331A0CSUW00.html)
     * [Potential Long-Term Intervention Strategies for COVID-19](https://covid-measures.github.io/)
     * [在线仿真](https://morganpkain.shinyapps.io/covid/)
