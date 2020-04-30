@@ -29,6 +29,7 @@ if __name__ == "__main__":
         'Vietnam': 'https://en.wikipedia.org/w/index.php?title=Template:2019%E2%80%9320_coronavirus_pandemic_data/Vietnam_medical_cases_chart&action=edit',
         'Philippines': 'https://en.wikipedia.org/w/index.php?title=Template:2019%E2%80%9320_coronavirus_pandemic_data/Philippines_medical_cases_chart&action=edit',
         'Burnei': 'https://en.wikipedia.org/w/index.php?title=Template:2019%E2%80%9320_coronavirus_pandemic_data/Brunei_medical_cases_chart&action=edit',
+        'Singapore': 'https://en.wikipedia.org/w/index.php?title=Template:2019%E2%80%9320_coronavirus_pandemic_data/Singapore_medical_cases_chart&action=edit',
     }
 
     for country, url in wikipedia_addresses.items():
@@ -41,3 +42,4 @@ if __name__ == "__main__":
         export_to_file(country=country, format='all', daily_collection=daily_collection)
 
     logging.info("End of the crawl")
+
