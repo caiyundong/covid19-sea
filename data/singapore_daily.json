@@ -582,5 +582,85 @@
         "discharged": 16,
         "discharged_total": 303,
         "hospitalised": 886
+    },
+    {
+        "date": "2020-04-05",
+        "confirmed": 120,
+        "confirmed_total": 1309,
+        "discharged": 23,
+        "discharged_total": 326,
+        "hospitalised": 983
+    },
+    {
+        "date": "2020-04-06",
+        "confirmed": 66,
+        "confirmed_total": 1375,
+        "discharged": 24,
+        "discharged_total": 350,
+        "hospitalised": 1025
+    },
+    {
+        "date": "2020-04-07",
+        "confirmed": 106,
+        "confirmed_total": 1481,
+        "discharged": 33,
+        "discharged_total": 383,
+        "hospitalised": 1098
+    },
+    {
+        "date": "2020-04-08",
+        "confirmed": 142,
+        "confirmed_total": 1623,
+        "discharged": 30,
+        "discharged_total": 413,
+        "hospitalised": 1210
+    },
+    {
+        "date": "2020-04-09",
+        "confirmed": 287,
+        "confirmed_total": 1910,
+        "discharged": 54,
+        "discharged_total": 467,
+        "hospitalised": 1443
+    },
+    {
+        "date": "2020-04-10",
+        "confirmed": 198,
+        "confirmed_total": 2108,
+        "discharged": 33,
+        "discharged_total": 500,
+        "hospitalised": 1608
+    },
+    {
+        "date": "2020-04-11",
+        "confirmed": 191,
+        "confirmed_total": 2299,
+        "discharged": 36,
+        "discharged_total": 536,
+        "hospitalised": 1763
+    },
+    {
+        "date": "2020-04-12",
+        "confirmed": 233,
+        "confirmed_total": 2532,
+        "discharged": 32,
+        "discharged_total": 568,
+        "hospitalised": 1964
+    },
+    {
+        "date": "2020-04-13",
+        "confirmed": 386,
+        "confirmed_total": 2918,
+        "discharged": 27,
+        "discharged_total": 594,
+        "hospitalised": 2324
+    },
+    {
+        "date": "2020-04-14",
+        "confirmed": 334,
+        "confirmed_total": 3252,
+        "discharged": 26,
+        "discharged_total": 620,
+        "hospitalised": 2632
     }
 ]
