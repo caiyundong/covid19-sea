@@ -13,7 +13,11 @@ def previous_date(current_date, days=1):
     :param current_date:
     :return:
     """
-    previous_date = datetime.strptime(current_date, "%Y-%m-%d")-timedelta(days=days)
+    try:
+        previous_date = datetime.strptime(current_date, "%Y-%m-%d")-timedelta(days=days)
+    except Exception as err:
+        previous_date = datetime.strptime(current_date, "%d-%m-%Y")-timedelta(days=days)
+
     return previous_date.strftime("%Y-%m-%d")
 
 
@@ -28,9 +32,10 @@ def parse_wikipedia(url, country, daily_collection):
     print(soup.textarea.text)
 
     # pattern = r"\{\{Medical cases chart/Row\|(\d+?-\d+?-\d+?)\|(|\d*?)\|(|\d*?)\|(|\d*?)\|\|\|(|\d*?)\|.+?\|(|\d*?)\|.+?\}\}"
-    pattern = r"\{\{Medical cases chart/Row\|(\d+?-\d+?-\d+?)\|(|\d*?)\|(|\d*?)\|(|\d*?)\|.+?\}\}"
+    # pattern = r"\{\{Medical cases chart/Row\|(\d+?-\d+?-\d+?)\|(|\d*?)\|(|\d*?)\|(|\d*?)\|.+?\}\}"
+    pattern = r"(\d+?-\d+?-\d+?);(\d*?);(\d*?);(\d*?);.+?"
     results = re.findall(pattern, soup.textarea.text, re.MULTILINE)
-    print(results)
+    print("results are ", results)
 
     for result in results:
         dt = result[0]

@@ -1,1 +1,746 @@
-[]
+[
+    {
+        "date": "2020-01-13",
+        "confirmed": 0,
+        "confirmed_total": 1,
+        "death_total": 0,
+        "discharged": 0,
+        "discharged_total": 0
+    },
+    {
+        "date": "2020-01-17",
+        "confirmed": 0,
+        "confirmed_total": 2,
+        "death_total": 0,
+        "discharged": 0,
+        "discharged_total": 0
+    },
+    {
+        "date": "2020-01-22",
+        "confirmed": 0,
+        "confirmed_total": 4,
+        "death_total": 0,
+        "discharged": 0,
+        "discharged_total": 0
+    },
+    {
+        "date": "2020-01-23",
+        "confirmed": 0,
+        "confirmed_total": 4,
+        "death_total": 0,
+        "discharged": 0,
+        "discharged_total": 0
+    },
+    {
+        "date": "2020-01-24",
+        "confirmed": 1,
+        "confirmed_total": 5,
+        "death_total": 0,
+        "discharged": 0,
+        "discharged_total": 0
+    },
+    {
+        "date": "2020-01-25",
+        "confirmed": 1,
+        "confirmed_total": 6,
+        "death_total": 0,
+        "discharged": 0,
+        "discharged_total": 0
+    },
+    {
+        "date": "2020-01-26",
+        "confirmed": 2,
+        "confirmed_total": 8,
+        "death_total": 0,
+        "discharged": 5,
+        "discharged_total": 5
+    },
+    {
+        "date": "2020-01-27",
+        "confirmed": 0,
+        "confirmed_total": 8,
+        "death_total": 0,
+        "discharged": 0,
+        "discharged_total": 5
+    },
+    {
+        "date": "2020-01-28",
+        "confirmed": 6,
+        "confirmed_total": 14,
+        "death_total": 0,
+        "discharged": 0,
+        "discharged_total": 5
+    },
+    {
+        "date": "2020-01-29",
+        "confirmed": 0,
+        "confirmed_total": 14,
+        "death_total": 0,
+        "discharged": 0,
+        "discharged_total": 5
+    },
+    {
+        "date": "2020-01-30",
+        "confirmed": 0,
+        "confirmed_total": 14,
+        "death_total": 0,
+        "discharged": 1,
+        "discharged_total": 6
+    },
+    {
+        "date": "2020-01-31",
+        "confirmed": 5,
+        "confirmed_total": 19,
+        "death_total": 0,
+        "discharged": 1,
+        "discharged_total": 7
+    },
+    {
+        "date": "2020-02-01",
+        "confirmed": 0,
+        "confirmed_total": 19,
+        "death_total": 0,
+        "discharged": 0,
+        "discharged_total": 7
+    },
+    {
+        "date": "2020-02-02",
+        "confirmed": 0,
+        "confirmed_total": 19,
+        "death_total": 0,
+        "discharged": 1,
+        "discharged_total": 8
+    },
+    {
+        "date": "2020-02-03",
+        "confirmed": 0,
+        "confirmed_total": 19,
+        "death_total": 0,
+        "discharged": 0,
+        "discharged_total": 8
+    },
+    {
+        "date": "2020-02-04",
+        "confirmed": 0,
+        "confirmed_total": 19,
+        "death_total": 0,
+        "discharged": 1,
+        "discharged_total": 9
+    },
+    {
+        "date": "2020-02-05",
+        "confirmed": 6,
+        "confirmed_total": 25,
+        "death_total": 0,
+        "discharged": 0,
+        "discharged_total": 9
+    },
+    {
+        "date": "2020-02-09",
+        "confirmed": 0,
+        "confirmed_total": 32,
+        "death_total": 0,
+        "discharged": 0,
+        "discharged_total": 10
+    },
+    {
+        "date": "2020-02-10",
+        "confirmed": 0,
+        "confirmed_total": 32,
+        "death_total": 0,
+        "discharged": 0,
+        "discharged_total": 10
+    },
+    {
+        "date": "2020-02-11",
+        "confirmed": 1,
+        "confirmed_total": 33,
+        "death_total": 0,
+        "discharged": 0,
+        "discharged_total": 10
+    },
+    {
+        "date": "2020-02-12",
+        "confirmed": 0,
+        "confirmed_total": 33,
+        "death_total": 0,
+        "discharged": 0,
+        "discharged_total": 10
+    },
+    {
+        "date": "2020-02-13",
+        "confirmed": 0,
+        "confirmed_total": 33,
+        "death_total": 0,
+        "discharged": 2,
+        "discharged_total": 12
+    },
+    {
+        "date": "2020-02-16",
+        "confirmed": 0,
+        "confirmed_total": 34,
+        "death_total": 0,
+        "discharged": 0,
+        "discharged_total": 15
+    },
+    {
+        "date": "2020-02-17",
+        "confirmed": 1,
+        "confirmed_total": 35,
+        "death_total": 0,
+        "discharged": 0,
+        "discharged_total": 15
+    },
+    {
+        "date": "2020-02-20",
+        "confirmed": 0,
+        "confirmed_total": 35,
+        "death_total": 0,
+        "discharged": 0,
+        "discharged_total": 17
+    },
+    {
+        "date": "2020-02-21",
+        "confirmed": 0,
+        "confirmed_total": 35,
+        "death_total": 0,
+        "discharged": 2,
+        "discharged_total": 19
+    },
+    {
+        "date": "2020-02-22",
+        "confirmed": 0,
+        "confirmed_total": 35,
+        "death_total": 0,
+        "discharged": 1,
+        "discharged_total": 20
+    },
+    {
+        "date": "2020-02-23",
+        "confirmed": 0,
+        "confirmed_total": 35,
+        "death_total": 0,
+        "discharged": 1,
+        "discharged_total": 21
+    },
+    {
+        "date": "2020-02-24",
+        "confirmed": 0,
+        "confirmed_total": 35,
+        "death_total": 0,
+        "discharged": 0,
+        "discharged_total": 21
+    },
+    {
+        "date": "2020-02-25",
+        "confirmed": 2,
+        "confirmed_total": 37,
+        "death_total": 0,
+        "discharged": 1,
+        "discharged_total": 22
+    },
+    {
+        "date": "2020-02-26",
+        "confirmed": 3,
+        "confirmed_total": 40,
+        "death_total": 0,
+        "discharged": 2,
+        "discharged_total": 24
+    },
+    {
+        "date": "2020-02-27",
+        "confirmed": 0,
+        "confirmed_total": 40,
+        "death_total": 0,
+        "discharged": 0,
+        "discharged_total": 24
+    },
+    {
+        "date": "2020-02-28",
+        "confirmed": 0,
+        "confirmed_total": 40,
+        "death_total": 0,
+        "discharged": 4,
+        "discharged_total": 28
+    },
+    {
+        "date": "2020-02-29",
+        "confirmed": 0,
+        "confirmed_total": 40,
+        "death_total": 0,
+        "discharged": 0,
+        "discharged_total": 28
+    },
+    {
+        "date": "2020-03-01",
+        "confirmed": 2,
+        "confirmed_total": 42,
+        "death_total": 1,
+        "discharged": 2,
+        "discharged_total": 30
+    },
+    {
+        "date": "2020-03-02",
+        "confirmed": 1,
+        "confirmed_total": 43,
+        "death_total": 1,
+        "discharged": 1,
+        "discharged_total": 31
+    },
+    {
+        "date": "2020-03-05",
+        "confirmed": 0,
+        "confirmed_total": 47,
+        "death_total": 1,
+        "discharged": 0,
+        "discharged_total": 31
+    },
+    {
+        "date": "2020-03-06",
+        "confirmed": 1,
+        "confirmed_total": 48,
+        "death_total": 1,
+        "discharged": 0,
+        "discharged_total": 31
+    },
+    {
+        "date": "2020-03-07",
+        "confirmed": 2,
+        "confirmed_total": 50,
+        "death_total": 1,
+        "discharged": 0,
+        "discharged_total": 31
+    },
+    {
+        "date": "2020-03-08",
+        "confirmed": 0,
+        "confirmed_total": 50,
+        "death_total": 1,
+        "discharged": 2,
+        "discharged_total": 33
+    },
+    {
+        "date": "2020-03-09",
+        "confirmed": 0,
+        "confirmed_total": 50,
+        "death_total": 1,
+        "discharged": 0,
+        "discharged_total": 33
+    },
+    {
+        "date": "2020-03-10",
+        "confirmed": 3,
+        "confirmed_total": 53,
+        "death_total": 1,
+        "discharged": 0,
+        "discharged_total": 33
+    },
+    {
+        "date": "2020-03-11",
+        "confirmed": 6,
+        "confirmed_total": 59,
+        "death_total": 1,
+        "discharged": 1,
+        "discharged_total": 34
+    },
+    {
+        "date": "2020-03-12",
+        "confirmed": 11,
+        "confirmed_total": 70,
+        "death_total": 1,
+        "discharged": 1,
+        "discharged_total": 35
+    },
+    {
+        "date": "2020-03-13",
+        "confirmed": 5,
+        "confirmed_total": 75,
+        "death_total": 1,
+        "discharged": 0,
+        "discharged_total": 35
+    },
+    {
+        "date": "2020-03-14",
+        "confirmed": 7,
+        "confirmed_total": 82,
+        "death_total": 1,
+        "discharged": 0,
+        "discharged_total": 35
+    },
+    {
+        "date": "2020-03-15",
+        "confirmed": 32,
+        "confirmed_total": 114,
+        "death_total": 1,
+        "discharged": 2,
+        "discharged_total": 37
+    },
+    {
+        "date": "2020-03-16",
+        "confirmed": 33,
+        "confirmed_total": 147,
+        "death_total": 1,
+        "discharged": 1,
+        "discharged_total": 38
+    },
+    {
+        "date": "2020-03-17",
+        "confirmed": 30,
+        "confirmed_total": 177,
+        "death_total": 1,
+        "discharged": 3,
+        "discharged_total": 41
+    },
+    {
+        "date": "2020-03-18",
+        "confirmed": 35,
+        "confirmed_total": 212,
+        "death_total": 1,
+        "discharged": 1,
+        "discharged_total": 42
+    },
+    {
+        "date": "2020-03-19",
+        "confirmed": 60,
+        "confirmed_total": 272,
+        "death_total": 1,
+        "discharged": 0,
+        "discharged_total": 42
+    },
+    {
+        "date": "2020-03-20",
+        "confirmed": 50,
+        "confirmed_total": 322,
+        "death_total": 1,
+        "discharged": 1,
+        "discharged_total": 43
+    },
+    {
+        "date": "2020-03-21",
+        "confirmed": 89,
+        "confirmed_total": 411,
+        "death_total": 1,
+        "discharged": 0,
+        "discharged_total": 43
+    },
+    {
+        "date": "2020-03-22",
+        "confirmed": 188,
+        "confirmed_total": 599,
+        "death_total": 1,
+        "discharged": 1,
+        "discharged_total": 44
+    },
+    {
+        "date": "2020-03-23",
+        "confirmed": 122,
+        "confirmed_total": 721,
+        "death_total": 1,
+        "discharged": 8,
+        "discharged_total": 52
+    },
+    {
+        "date": "2020-03-24",
+        "confirmed": 106,
+        "confirmed_total": 827,
+        "death_total": 4,
+        "discharged": 5,
+        "discharged_total": 57
+    },
+    {
+        "date": "2020-03-25",
+        "confirmed": 107,
+        "confirmed_total": 934,
+        "death_total": 4,
+        "discharged": 13,
+        "discharged_total": 70
+    },
+    {
+        "date": "2020-03-26",
+        "confirmed": 111,
+        "confirmed_total": 1045,
+        "death_total": 4,
+        "discharged": 18,
+        "discharged_total": 88
+    },
+    {
+        "date": "2020-03-27",
+        "confirmed": 91,
+        "confirmed_total": 1136,
+        "death_total": 5,
+        "discharged": 9,
+        "discharged_total": 97
+    },
+    {
+        "date": "2020-03-28",
+        "confirmed": 109,
+        "confirmed_total": 1245,
+        "death_total": 6,
+        "discharged": 0,
+        "discharged_total": 97
+    },
+    {
+        "date": "2020-03-29",
+        "confirmed": 143,
+        "confirmed_total": 1388,
+        "death_total": 7,
+        "discharged": 4,
+        "discharged_total": 101
+    },
+    {
+        "date": "2020-03-30",
+        "confirmed": 136,
+        "confirmed_total": 1524,
+        "death_total": 9,
+        "discharged": 26,
+        "discharged_total": 127
+    },
+    {
+        "date": "2020-03-31",
+        "confirmed": 127,
+        "confirmed_total": 1651,
+        "death_total": 10,
+        "discharged": 215,
+        "discharged_total": 342
+    },
+    {
+        "date": "2020-04-01",
+        "confirmed": 120,
+        "confirmed_total": 1771,
+        "death_total": 12,
+        "discharged": 74,
+        "discharged_total": 416
+    },
+    {
+        "date": "2020-04-02",
+        "confirmed": 104,
+        "confirmed_total": 1875,
+        "death_total": 15,
+        "discharged": 89,
+        "discharged_total": 505
+    },
+    {
+        "date": "2020-04-03",
+        "confirmed": 103,
+        "confirmed_total": 1978,
+        "death_total": 19,
+        "discharged": 76,
+        "discharged_total": 581
+    },
+    {
+        "date": "2020-04-04",
+        "confirmed": 89,
+        "confirmed_total": 2067,
+        "death_total": 20,
+        "discharged": 31,
+        "discharged_total": 612
+    },
+    {
+        "date": "2020-04-05",
+        "confirmed": 102,
+        "confirmed_total": 2169,
+        "death_total": 23,
+        "discharged": 62,
+        "discharged_total": 674
+    },
+    {
+        "date": "2020-04-06",
+        "confirmed": 51,
+        "confirmed_total": 2220,
+        "death_total": 26,
+        "discharged": 119,
+        "discharged_total": 793
+    },
+    {
+        "date": "2020-04-07",
+        "confirmed": 38,
+        "confirmed_total": 2258,
+        "death_total": 27,
+        "discharged": 31,
+        "discharged_total": 824
+    },
+    {
+        "date": "2020-04-08",
+        "confirmed": 111,
+        "confirmed_total": 2369,
+        "death_total": 30,
+        "discharged": 64,
+        "discharged_total": 888
+    },
+    {
+        "date": "2020-04-09",
+        "confirmed": 54,
+        "confirmed_total": 2423,
+        "death_total": 32,
+        "discharged": 52,
+        "discharged_total": 940
+    },
+    {
+        "date": "2020-04-10",
+        "confirmed": 50,
+        "confirmed_total": 2473,
+        "death_total": 33,
+        "discharged": 73,
+        "discharged_total": 1013
+    },
+    {
+        "date": "2020-04-11",
+        "confirmed": 45,
+        "confirmed_total": 2518,
+        "death_total": 35,
+        "discharged": 122,
+        "discharged_total": 1135
+    },
+    {
+        "date": "2020-04-12",
+        "confirmed": 33,
+        "confirmed_total": 2551,
+        "death_total": 38,
+        "discharged": 83,
+        "discharged_total": 1218
+    },
+    {
+        "date": "2020-04-13",
+        "confirmed": 28,
+        "confirmed_total": 2579,
+        "death_total": 40,
+        "discharged": 70,
+        "discharged_total": 1288
+    },
+    {
+        "date": "2020-04-14",
+        "confirmed": 34,
+        "confirmed_total": 2613,
+        "death_total": 41,
+        "discharged": 117,
+        "discharged_total": 1405
+    },
+    {
+        "date": "2020-04-15",
+        "confirmed": 30,
+        "confirmed_total": 2643,
+        "death_total": 43,
+        "discharged": 92,
+        "discharged_total": 1497
+    },
+    {
+        "date": "2020-04-16",
+        "confirmed": 29,
+        "confirmed_total": 2672,
+        "death_total": 46,
+        "discharged": 96,
+        "discharged_total": 1593
+    },
+    {
+        "date": "2020-04-17",
+        "confirmed": 28,
+        "confirmed_total": 2700,
+        "death_total": 47,
+        "discharged": 96,
+        "discharged_total": 1689
+    },
+    {
+        "date": "2020-04-18",
+        "confirmed": 33,
+        "confirmed_total": 2733,
+        "death_total": 47,
+        "discharged": 98,
+        "discharged_total": 1787
+    },
+    {
+        "date": "2020-04-19",
+        "confirmed": 32,
+        "confirmed_total": 2765,
+        "death_total": 47,
+        "discharged": 141,
+        "discharged_total": 1928
+    },
+    {
+        "date": "2020-04-20",
+        "confirmed": 27,
+        "confirmed_total": 2792,
+        "death_total": 47,
+        "discharged": 71,
+        "discharged_total": 1999
+    },
+    {
+        "date": "2020-04-21",
+        "confirmed": 19,
+        "confirmed_total": 2811,
+        "death_total": 48,
+        "discharged": 109,
+        "discharged_total": 2108
+    },
+    {
+        "date": "2020-04-22",
+        "confirmed": 15,
+        "confirmed_total": 2826,
+        "death_total": 49,
+        "discharged": 244,
+        "discharged_total": 2352
+    },
+    {
+        "date": "2020-04-23",
+        "confirmed": 13,
+        "confirmed_total": 2839,
+        "death_total": 50,
+        "discharged": 78,
+        "discharged_total": 2430
+    },
+    {
+        "date": "2020-04-24",
+        "confirmed": 15,
+        "confirmed_total": 2854,
+        "death_total": 50,
+        "discharged": 60,
+        "discharged_total": 2490
+    },
+    {
+        "date": "2020-04-25",
+        "confirmed": 53,
+        "confirmed_total": 2907,
+        "death_total": 51,
+        "discharged": 57,
+        "discharged_total": 2547
+    },
+    {
+        "date": "2020-04-26",
+        "confirmed": 15,
+        "confirmed_total": 2922,
+        "death_total": 51,
+        "discharged": 47,
+        "discharged_total": 2594
+    },
+    {
+        "date": "2020-04-27",
+        "confirmed": 9,
+        "confirmed_total": 2931,
+        "death_total": 52,
+        "discharged": 15,
+        "discharged_total": 2609
+    },
+    {
+        "date": "2020-04-28",
+        "confirmed": 7,
+        "confirmed_total": 2938,
+        "death_total": 54,
+        "discharged": 43,
+        "discharged_total": 2652
+    },
+    {
+        "date": "2020-04-29",
+        "confirmed": 9,
+        "confirmed_total": 2947,
+        "death_total": 54,
+        "discharged": 13,
+        "discharged_total": 2665
+    },
+    {
+        "date": "2020-04-30",
+        "confirmed": 7,
+        "confirmed_total": 2954,
+        "death_total": 54,
+        "discharged": 22,
+        "discharged_total": 2687
+    }
+]
