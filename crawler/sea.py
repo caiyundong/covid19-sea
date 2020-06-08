@@ -23,12 +23,13 @@ if __name__ == "__main__":
     logging.info("Start the crawl")
 
     wikipedia_addresses = {
-        'Malaysia': "https://en.wikipedia.org/w/index.php?title=Template:2019%E2%80%9320_coronavirus_pandemic_data/Malaysia_medical_cases_chart&action=edit",
-        'Indonesia': "https://en.wikipedia.org/w/index.php?title=Template:2019%E2%80%9320_coronavirus_pandemic_data/Indonesia_medical_cases_chart&action=edit",
-        'Thailand': 'https://en.wikipedia.org/w/index.php?title=Template:2019%E2%80%9320_coronavirus_pandemic_data/Thailand_medical_cases_chart&action=edit',
-        'Vietnam': 'https://en.wikipedia.org/w/index.php?title=Template:2019%E2%80%9320_coronavirus_pandemic_data/Vietnam_medical_cases_chart&action=edit',
-        'Philippines': 'https://en.wikipedia.org/w/index.php?title=Template:2019%E2%80%9320_coronavirus_pandemic_data/Philippines_medical_cases_chart&action=edit',
-        'Burnei': 'https://en.wikipedia.org/w/index.php?title=Template:2019%E2%80%9320_coronavirus_pandemic_data/Brunei_medical_cases_chart&action=edit',
+        'Singapore': "https://en.wikipedia.org/w/index.php?title=Template:COVID-19_pandemic_data/Singapore_medical_cases_chart&action=edit",
+        'Malaysia': "https://en.wikipedia.org/w/index.php?title=Template:COVID-19_pandemic_data/Malaysia_medical_cases_chart&action=edit",
+        'Indonesia': "https://en.wikipedia.org/w/index.php?title=Template:COVID-19_pandemic_data/Indonesia_medical_cases_chart&action=edit",
+        'Thailand': 'https://en.wikipedia.org/w/index.php?title=Template:COVID-19_pandemic_data/Thailand_medical_cases_chart&action=edit',
+        'Vietnam': 'https://en.wikipedia.org/w/index.php?title=Template:COVID-19_pandemic_data/Vietnam_medical_cases_chart&action=edit',
+        'Philippines': 'https://en.wikipedia.org/w/index.php?title=Template:COVID-19_pandemic_data/Philippines_medical_cases_chart&action=edit',
+        'Burnei': 'https://en.wikipedia.org/w/index.php?title=Template:COVID-19_pandemic_data/Brunei_medical_cases_chart&action=edit',
     }
 
     for country, url in wikipedia_addresses.items():

@@ -25,6 +25,7 @@ if __name__ == "__main__":
 
     # crawl the daily statistics
     json_arr = []
+    """
     results = requests.get("https://services6.arcgis.com/LZwBmoXba0zrRap7/arcgis/rest/services/COVID_19_Prod_cumulative/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Date%20asc&resultOffset=0&resultRecordCount=2000&cacheHint=true").json()
     if 'error' in results:
         results = requests.get("https://services6.arcgis.com/LZwBmoXba0zrRap7/arcgis/rest/services/COVID_19_Prod_B_cumulative/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Date%20asc&resultOffset=0&resultRecordCount=2000&cacheHint=true").json()
@@ -45,14 +46,15 @@ if __name__ == "__main__":
         print(result_json)
         json_arr.append(result_json)
         daily_collection.update_one({"country": "Singapore", "date": dt}, {'$set': result_json}, upsert=True)
-
-    parse_wikipedia(url="https://en.wikipedia.org/w/index.php?title=Template:2019%E2%80%9320_coronavirus_pandemic_data/Malaysia_medical_cases_chart&action=edit", country='Malaysia', daily_collection=daily_collection)
+    """
+    parse_wikipedia(url="https://en.wikipedia.org/w/index.php?title=Template:COVID-19_pandemic_data/Singapore_medical_cases_chart&action=edit", country='Singapore', daily_collection=daily_collection)
 
     # export to files
     export_to_file(country='Singapore', format='csv', daily_collection=daily_collection)
     export_to_file(country='Singapore', format='json', daily_collection=daily_collection)
 
     # crawl the detailed cases
+    """
     logging.info("Craw the cases in Singapore")
     detailed_cases = requests.get("https://services6.arcgis.com/LZwBmoXba0zrRap7/arcgis/rest/services/COVID_19_Prod_feature/FeatureServer/0/query?f=json&where=1%3D1&returnGeometry=false&spatialRel=esriSpatialRelIntersects&outFields=*&orderByFields=Case_ID%20asc&resultOffset=0&resultRecordCount=1000&cacheHint=true").json()
     if 'error' in detailed_cases:
@@ -128,3 +130,4 @@ if __name__ == "__main__":
 
     with open('../data/singapore_cases.json', 'w') as outfile:
         json.dump(case_json_arr, outfile, indent=4)
+    """

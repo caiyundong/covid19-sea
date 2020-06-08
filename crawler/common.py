@@ -9,7 +9,7 @@ import pandas
 
 def previous_date(current_date, days=1):
     """
-    Return the previous_date
+    Return the previous_datef
     :param current_date:
     :return:
     """
@@ -27,16 +27,23 @@ def parse_wikipedia(url, country, daily_collection):
     soup = bs(content, 'html.parser')
     print(soup.textarea.text)
 
-    # pattern = r"\{\{Medical cases chart/Row\|(\d+?-\d+?-\d+?)\|(|\d*?)\|(|\d*?)\|(|\d*?)\|\|\|(|\d*?)\|.+?\|(|\d*?)\|.+?\}\}"
-    pattern = r"\{\{Medical cases chart/Row\|(\d+?-\d+?-\d+?)\|(|\d*?)\|(|\d*?)\|(|\d*?)\|.+?\}\}"
+    if country == 'Singapore':
+        pattern = r"(\d+?-\d+?-\d+?);(\d*?);(\d*?);(\d*?);(\d*?);.+?"
+    else:
+        pattern = r"(\d+?-\d+?-\d+?);(\d*?);(\d*?);(\d*?);.+?"
     results = re.findall(pattern, soup.textarea.text, re.MULTILINE)
-    print(results)
+    print("results of findall are ", country, results)
 
     for result in results:
         dt = result[0]
         death = 0 if result[1] == '' else int(result[1])
         cued = 0 if result[2] == '' else int(result[2])
-        total = int(result[3])
+        if country == 'Singapore':
+            non_community = 0 if result[3] == '' else int(result[3])
+            community = 0 if result[4] == '' else int(result[4])
+            total = non_community + community
+        else:
+            total = int(result[3])
         confirmed = 0
         discharged = 0
         prev_dt = previous_date((dt))
@@ -54,7 +61,7 @@ def parse_wikipedia(url, country, daily_collection):
             "death_total": int(death),
             "update_ts": time.time()
         }
-        print(result_json, {"country": country, "date": dt} )
+        print(result_json, {"country": country, "date": dt})
         daily_collection.update({"country": country, "date": dt}, {'$set': result_json}, upsert=True)
         total_records[dt] = result_json
 
