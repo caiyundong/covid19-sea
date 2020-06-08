@@ -13,7 +13,11 @@ def previous_date(current_date, days=1):
     :param current_date:
     :return:
     """
-    previous_date = datetime.strptime(current_date, "%Y-%m-%d")-timedelta(days=days)
+    try:
+        previous_date = datetime.strptime(current_date, "%Y-%m-%d")-timedelta(days=days)
+    except Exception as err:
+        previous_date = datetime.strptime(current_date, "%d-%m-%Y")-timedelta(days=days)
+
     return previous_date.strftime("%Y-%m-%d")
 
 
